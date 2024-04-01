@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static  %}
+  <link rel="stylesheet" href="{% static 'home_bg.css' %}">
+  <script src="{% static 'disableContextMenu.js' %}"></script>
+  <title>Start</title>
+</head>
+<body>
+  <p class="main-text">Get Ready to Start the Hunt</p>
+
+  <div id="start" class="start-btn"><span><a href="{% url 'question1' name=request.user.username %}" style="text-decoration:none;color:white;">Click here to start</a></span></div>
+</body>
+</html>

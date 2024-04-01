@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static  %}
+    <title>Questions</title>
+    <link rel="stylesheet" href="{% static '/style_question.css' %}">
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <a href="{% url 'logout' %}" id="logout">
+                Give Up
+            </a>
+        </nav>
+        <h1 class="title">Treasure Hunt</h1>
+    </div>
+
+    <div class="modal" id="exit-modal">
+        <p>Sure you want to give up?</p>
+        <button id="yes" class="yes">Yes</button>
+        <button id="no" class="no">No</button>
+            <header class="container">
+              <div class="heading">
+                AURA 2K24
+            </header>
+            <br>
+    </div>
+
+    <div class="question">
+        <h2 class=question_title>Question 5: guess the clue</h2>
+        <form method="post" action="/question5_zor/{request.user}">
+            {% csrf_token %}
+            <div class="form_group">
+                <img src="{% static 'login_bg.jpg' %}" alt="image" height="350px" width="400px" class="img"> <br>
+                <label for="answerInput">Your answer</label>
+                <input type="text" id="answerInput" class="input_box" name="answer" aria-describedby="emailHelp" placeholder="Enter answer">
+            </div>
+           <div class="submit_div"> <button type="submit" class="submit_btn">Submit</button></div>
+           <div class="erro_msg">
+            {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+        <div/>
+        </form>
+        <br>
+    </div>
+
+    <script src="{% static 'disableContextMenu.js' %}"></script>
+    <script src="script.js"></script> <!-- Assuming this script is for answer validation -->
+</body>
+</html>

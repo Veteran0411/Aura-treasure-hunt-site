@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Metal Mania&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(login_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    font-family: "Metal Mania";
+    overflow: hidden;
+
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    background-color: #2e1b05;
+    font-size: 30px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 3;
+    font-size: 30px;
+    text-align: center;
+    background-color: #2e1b05;
+    color: white;
+}
+
+.modal.show {
+    display: block;
+    height: 30vh;
+    width: 40vw;
+}
+
+.title {
+    font-size: 4.5vh;
+    color: white;
+}
+
+.question {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+.input_box {
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px black;
+    height: 2.3rem;
+    width: 15rem;
+    border-radius: 10px;
+    background-color: rgb(230, 221, 214);
+}
+
+.question_title {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 5px white);
+}
+
+#logout {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: #f2f2f2;
+    text-decoration: none;
+
+}
+
+.img {
+    border-radius: 10px;
+    height: 25rem;
+    width: 30rem;
+}
+
+.submit_div {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit_btn {
+    cursor: pointer;
+    color: white;
+    background-color: #2e1b05;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+    justify-content: center;
+}
+.form_group label{
+    font-size: 1.5rem;
+}
+.submit_btn:hover {
+    transform: scale(1.05);
+    outline-offset: 1px;
+    outline: 5px solid #2e1b05;
+}
+.erro_msg{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}

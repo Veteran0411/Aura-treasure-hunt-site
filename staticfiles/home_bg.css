@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Metal Mania&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+    background-image: url(login_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main-text {
+    text-align: center;
+    font-size: 100px;
+    margin-top: 30vh;
+    font-family: "Metal Mania";
+    width: 60vw;
+    margin-left: 20vw;
+    color: rgb(29, 7, 7);
+
+}
+
+.start-btn {
+    border-radius: 4px;
+    background-color: #310e04;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 33%;
+    height: 13vh;
+    width: 35vw;
+    margin-top: 5vh;
+    font-size: 40px;
+    font-family: "Metal Mania";
+}
+
+.start-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.start-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.start-btn:hover span {
+    padding-right: 25px;
+}
+
+.start-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}

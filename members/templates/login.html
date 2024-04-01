@@ -1,0 +1,53 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width="device-width, initial-scale=1.0">
+  {% load static  %}
+  <link rel="stylesheet" href="{% static 'loginPage.css' %}">
+  <link rel="stylesheet" href="style_login.css">
+  <script src="{% static 'disableContextMenu.js' %}"></script>
+  <title>Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      AURA 2K24
+    </div>
+    <div class="loginGroup">
+      <div class="title">TREASURE HUNT</div>
+      
+
+      <section class="card">
+        <form action="" method=POST class="container">
+            {% csrf_token %}
+            <div class="name">
+            <label for="username">User Name</label>
+            <input type="text" class="name_box"name="username" aria-describedby="emailHelp" placeholder="Enter your username" >
+            </div>
+    
+            <div class="name">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="name_box" name="password" placeholder="Enter your pasword">
+            </div>
+            <br>
+            <input type="submit" value="submit" id="login">
+            <br>
+        <div class="errorMsg">
+        {% if messages %}
+            {% for message in messages%}
+            {{message}}
+            {% endfor %}
+        {% endif %}
+        </div>
+        <br>
+        </form>
+
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
