@@ -11,7 +11,7 @@ Welcome to the Treasure Hunt Online Platform! This web application is built usin
 To run the application locally, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Install the necessary dependencies by running `pip install -r requirements.txt`.
+2. Install the necessary dependencies by running
 3. Set up the database by running `python manage.py migrate`.
 4. Create a superuser account by running `python manage.py createsuperuser` and follow the prompts.
 5. Start the development server with `python manage.py runserver`.
